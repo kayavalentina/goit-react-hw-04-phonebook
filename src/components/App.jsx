@@ -7,7 +7,7 @@ import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 
-const App = () => {
+export const App = () => {
   const [contacts, setContacts] = useState(() => {
     const savedContacts = JSON.parse(localStorage.getItem('contacts'));
     return savedContacts || [...phonebook];
@@ -57,5 +57,3 @@ const App = () => {
     </AppContainer>
   );
 };
-
-export default App;
